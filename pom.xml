@@ -10,10 +10,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>local.ss.lms.librarianmsvc</groupId>
-	<artifactId>librarianmsvc</artifactId>
+	<groupId>com.smoothstack.avalanche.lms.librarianmsvc</groupId>
+	<artifactId>lms-msvc-librarian</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>librarianmsvc</name>
+	<name>lms-msvc-librarian</name>
 	<description>Librarian microservice for LMS</description>
 
 	<properties>
@@ -86,6 +86,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+
 		<!-- Eureka Client -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>

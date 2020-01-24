@@ -1,4 +1,4 @@
-package com.smoothstack.avalanche.lms.controller;
+package com.smoothstack.avalanche.lms.librarian.controller;
 
 
 import java.util.List;
@@ -7,9 +7,9 @@ import java.util.Optional;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import com.smoothstack.avalanche.lms.entity.Branch;
-import com.smoothstack.avalanche.lms.entity.BookCopies;
-import com.smoothstack.avalanche.lms.svc.LibrarianSVC;
+import com.smoothstack.avalanche.lms.librarian.entity.Branch;
+import com.smoothstack.avalanche.lms.librarian.entity.BookCopies;
+import com.smoothstack.avalanche.lms.librarian.svc.LibrarianSVC;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -47,6 +47,7 @@ public class LibrarianController {
 		[]		2. RETURN
 		[] B. QUIT
 	*/
+
 	// -- [ 1 ] -- Get All Branches
 	@GetMapping( "/branches" )
 	public List<Branch> readBranches() {
@@ -61,22 +62,14 @@ public class LibrarianController {
 
 	// -- [ 3 ] -- Update branch name/address: {"branchName": "Frostburg State University", "branchId": 1, "branchAddress": "2417 Summit Point"}
 	@PutMapping( "/branch" )
-	public ResponseEntity<Branch> updateBranch( @RequestBody Branch branch ) {
-		System.out.println("BRANCH UPDATE CALLED");
+	public void updateBranch( @RequestBody Branch branch ) {
 		LibrarianService.updateBranch( branch );
-		ResponseEntity<Branch> response = new ResponseEntity<Branch>( HttpStatus.NO_CONTENT );
-		return response;
 	}
 
 	// -- [ 4 ] -- Update book copies at branch: {"bookId": 1, "branchId": 1, "noOfCopies": 15}
 	@PutMapping( "/bookcopies" )
-	public ResponseEntity<BookCopies> updateBookCopies( @RequestBody BookCopies copies ) {
-		System.out.println("BOOK COPIES CALLED");
-		// copies.setBranchId( id );
-		// System.out.println( copies );
+	public void updateBookCopies( @RequestBody BookCopies copies ) {
 		LibrarianService.updateBookCopies( copies );
-		ResponseEntity<BookCopies> response = new ResponseEntity<BookCopies>( HttpStatus.NO_CONTENT );
-		return response;
 	}
 
 }

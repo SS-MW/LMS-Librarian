@@ -1,4 +1,4 @@
-package com.smoothstack.avalanche.lms.entity;
+package com.smoothstack.avalanche.lms.librarian.entity;
 
 import javax.persistence.Id;
 import javax.persistence.GenerationType;
@@ -8,7 +8,7 @@ import javax.persistence.Table;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 
-import com.smoothstack.avalanche.lms.dao.BookCopiesDAO;
+import com.smoothstack.avalanche.lms.librarian.dao.BookCopiesDAO;
 
 
 @Entity

@@ -1,4 +1,4 @@
-package com.smoothstack.avalanche.lms.entity;
+package com.smoothstack.avalanche.lms.librarian.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -50,5 +50,5 @@ public class Branch {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
+
 }

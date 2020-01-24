@@ -1,13 +1,13 @@
 -- DROP ALL TABLES. ORDER IS (MOSTLY) IMPORTANT DUE TO FK CONSTRAINTS --
 DROP TABLE IF EXISTS `tbl_book_genres`;
--- DROP TABLE IF EXISTS `tbl_book_copies`;
--- DROP TABLE IF EXISTS `tbl_book_authors`;
--- DROP TABLE IF EXISTS `tbl_library_branch`;
--- DROP TABLE IF EXISTS `tbl_book`;
--- DROP TABLE IF EXISTS `tbl_publisher`;
--- DROP TABLE IF EXISTS `tbl_borrower`;
--- DROP TABLE IF EXISTS `tbl_genre`;
--- DROP TABLE IF EXISTS `tbl_author`;
+DROP TABLE IF EXISTS `tbl_book_copies`;
+DROP TABLE IF EXISTS `tbl_book_authors`;
+DROP TABLE IF EXISTS `tbl_library_branch`;
+DROP TABLE IF EXISTS `tbl_book`;
+DROP TABLE IF EXISTS `tbl_publisher`;
+DROP TABLE IF EXISTS `tbl_borrower`;
+DROP TABLE IF EXISTS `tbl_genre`;
+DROP TABLE IF EXISTS `tbl_author`;
 
 -- AUTHOR --
 CREATE TABLE `tbl_author` (
