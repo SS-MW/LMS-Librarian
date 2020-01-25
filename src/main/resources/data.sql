@@ -23,7 +23,7 @@ VALUES
 (5,'Georas Petlyura'),
 (6,'Adan Gregon'),
 (7,'Madlen Episcopio'),
-(8,'Alasteir LBIGINTill'),
+(8,'Alasteir Lill'),
 (9,'Garrik Fitzsymon'),
 (10,'Ian Iskowicz'),
 (11,'Raf Lambirth'),
@@ -84,13 +84,13 @@ CREATE TABLE `tbl_library_branch` (
 );
 INSERT INTO `tbl_library_branch`
 VALUES
-(1,'Frostburg State University','2417 Summit PoBIGINT'),
+(1,'Frostburg State University','2417 Summit Point'),
 (2,'Rhode Island School of Design','2286 Boyd Way'),
 (3,'University of Nebraska - Lincoln','7192 Morningstar Circle'),
 (4,'Syrian Virtual University','75 Pond Alley'),
-(5,'Dokkyo University School of Medicine','3 Summit PoBIGINT'),
+(5,'Dokkyo University School of Medicine','3 Summit Point'),
 (6,'Free University of Bozen','7100 Spohn Park'),
-(7,'Hartford College for Women','7 Prairie Rose PoBIGINT'),
+(7,'Hartford College for Women','7 Prairie Rose Point'),
 (8,'Narsee Monjee Institute of Management Studies','7 David Junction'),
 (9,'Mendeleev University of Chemical Technology','30842 Buell Terrace'),
 (10,'Doho University','547 Forest Lane'),
