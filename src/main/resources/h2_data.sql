@@ -259,7 +259,6 @@ CREATE TABLE `tbl_book_genres` (
     ON DELETE CASCADE
     ON UPDATE CASCADE
 );
-
 INSERT INTO `tbl_book_genres`
 VALUES
 (1,1),

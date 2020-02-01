@@ -60,7 +60,7 @@ public class LibrarianController {
 		return LibrarianService.findBookCopiesByBranchId( id );
 	}
 
-	// -- [ 3 ] -- Update branch name/address: {"branchName": "Frostburg State University", "branchId": 1, "branchAddress": "2417 Summit Point"}
+	// -- [ 3 ] -- Update branch name/address:  {"id": 1, "name": "Frostburg State University", "address": "2417 Summit Point"}
 	@PutMapping( "/branch" )
 	public void updateBranch( @RequestBody Branch branch ) {
 		LibrarianService.updateBranch( branch );
