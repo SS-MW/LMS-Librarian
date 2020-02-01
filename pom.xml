@@ -11,9 +11,9 @@
 	</parent>
 
 	<groupId>com.smoothstack.avalanche.lms.librarianmsvc</groupId>
-	<artifactId>lms-msvc-librarian</artifactId>
+	<artifactId>librarianmsvc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>lms-msvc-librarian</name>
+	<name>lms-librarian</name>
 	<description>Librarian microservice for LMS</description>
 
 	<properties>
