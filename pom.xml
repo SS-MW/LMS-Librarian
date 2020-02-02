@@ -11,9 +11,9 @@
 	</parent>
 
 	<groupId>com.smoothstack.avalanche.lms.librarianmsvc</groupId>
-	<artifactId>lms-msvc-librarian</artifactId>
+	<artifactId>librarianmsvc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>lms-msvc-librarian</name>
+	<name>lms-librarian</name>
 	<description>Librarian microservice for LMS</description>
 
 	<properties>
@@ -23,16 +23,36 @@
 
 	<dependencies>
 
-		<!-- Maven -->
+		<!-- Actuator -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
 
 		<!-- Eureka Client -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency> -->
+
+		<!-- H2 In-mem Database -->
+		<!-- <dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency> -->
+
+		<!-- Hibernate -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<!-- Jackson JSON parser -->
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.3.0</version>
 		</dependency>
 
 		<!-- Java JDBC connector -->
@@ -41,25 +61,19 @@
 			<artifactId>spring-boot-starter-jdbc</artifactId>
 		</dependency>
 
-		<!-- Hibernate -->
+		<!-- Maven -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<!-- H2 In-mem Database -->
+		<!-- MySQL JDBC Driver -->
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <version>8.0.19</version>
 		</dependency>
 
-		<!-- Jackson JSON parser -->
-		<dependency>
-      <groupId>javax.xml.bind</groupId>
-      <artifactId>jaxb-api</artifactId>
-      <version>2.3.0</version>
-		</dependency>
 
 		<!-- JUnit -->
 		<dependency>
@@ -95,5 +109,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>

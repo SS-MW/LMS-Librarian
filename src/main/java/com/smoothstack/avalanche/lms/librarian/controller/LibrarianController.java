@@ -4,6 +4,8 @@ package com.smoothstack.avalanche.lms.librarian.controller;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
@@ -55,14 +57,17 @@ public class LibrarianController {
 	}
 
 	// -- [ 2 ] -- Get Book Copies by Branch
-	@GetMapping( "/branch" )
-	public List<BookCopies> findBookCopiesByBranchId( @RequestParam Long id ) {
+	@GetMapping( "/branches:{id}" )
+	public List<BookCopies> findBookCopiesByBranchId( @Valid @PathVariable Long id ) {
 		return LibrarianService.findBookCopiesByBranchId( id );
 	}
 
-	// -- [ 3 ] -- Update branch name/address: {"branchName": "Frostburg State University", "branchId": 1, "branchAddress": "2417 Summit Point"}
-	@PutMapping( "/branch" )
-	public void updateBranch( @RequestBody Branch branch ) {
+	// -- [ 3 ] -- Update branch name/address:  {"id": 1, "name": "Frostburg State University", "address": "2417 Summit Point"}
+	@PutMapping( "/branches:{id}" )
+	public void updateBranch(
+		@RequestBody Branch branch,
+		@Valid @PathVariable Long id ) {
+		branch.setId(id);
 		LibrarianService.updateBranch( branch );
 	}
 
