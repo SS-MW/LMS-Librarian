@@ -40,7 +40,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		
+
 		<!-- Actuator -->
 		<dependency>
       <groupId>org.springframework.boot</groupId>
@@ -85,20 +85,6 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-
-		<!-- Eureka Client -->
-		<!-- <dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactI
-			d>spring-cloud-starter-netflix-eureka-client</artifactId>
-		</dependency> -->
-
-		<!-- H2 In-mem Database -->
-		<!-- <dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
-		</dependency> -->
 
 	</dependencies>
 

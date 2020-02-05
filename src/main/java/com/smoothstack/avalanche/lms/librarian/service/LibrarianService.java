@@ -1,9 +1,7 @@
-package com.smoothstack.avalanche.lms.librarian.svc;
+package com.smoothstack.avalanche.lms.librarian.service;
 
-import java.util.Optional;
 
 import java.util.List;
-import java.util.ArrayList;
 
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +14,7 @@ import com.smoothstack.avalanche.lms.librarian.dao.BookCopiesDAO;
 
 
 @Service
-public class LibrarianSVC {
+public class LibrarianService {
 
 	@Autowired
 	private BranchDAO branchDAO;

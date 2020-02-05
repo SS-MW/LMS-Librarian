@@ -8,8 +8,6 @@ import javax.persistence.Table;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 
-import com.smoothstack.avalanche.lms.librarian.dao.BookCopiesDAO;
-
 
 @Entity
 @Table(name = "tbl_book_copies")
