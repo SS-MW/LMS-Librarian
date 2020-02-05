@@ -10,7 +10,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>com.smoothstack.avalanche.lms.librarianmsvc</groupId>
+	<groupId>com.smoothstack.avalanche</groupId>
 	<artifactId>librarianmsvc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>lms-librarian</name>
@@ -21,26 +21,31 @@
 		<spring-cloud.version>Hoxton.SR1</spring-cloud.version>
 	</properties>
 
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 	<dependencies>
 
+		<!-- Maven -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
 		<!-- Actuator -->
 		<dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
-
-		<!-- Eureka Client -->
-		<!-- <dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-		</dependency> -->
-
-		<!-- H2 In-mem Database -->
-		<!-- <dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
-		</dependency> -->
 
 		<!-- Hibernate -->
 		<dependency>
@@ -61,19 +66,12 @@
 			<artifactId>spring-boot-starter-jdbc</artifactId>
 		</dependency>
 
-		<!-- Maven -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
 		<!-- MySQL JDBC Driver -->
 		<dependency>
-	    <groupId>mysql</groupId>
-	    <artifactId>mysql-connector-java</artifactId>
-	    <version>8.0.19</version>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.19</version>
 		</dependency>
-
 
 		<!-- JUnit -->
 		<dependency>
@@ -87,19 +85,22 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-	</dependencies>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>${spring-cloud.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
+		<!-- Eureka Client -->
+		<!-- <dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactI
+			d>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency> -->
+
+		<!-- H2 In-mem Database -->
+		<!-- <dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency> -->
+
+	</dependencies>
 
 	<build>
 		<plugins>
@@ -109,4 +110,5 @@
 			</plugin>
 		</plugins>
 	</build>
+
 </project>
