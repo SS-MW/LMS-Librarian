@@ -93,37 +93,12 @@
 	</dependencies>
 
 	<build>
+		<finalName>${project.name}-${project.version}-${build.number}-${build.revision}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>2.4</version>
-        <configuration>
-            <archive>
-                <manifest>
-                    <addClasspath>true</addClasspath>
-                </manifest>
-                <manifestEntries>
-                    <Build-Time>${maven.build.timestamp}</Build-Time>
-                </manifestEntries>
-                <manifestSections>
-                    <manifestSection>
-                        <name>${build.manifest.section}</name>
-                        <manifestEntries>
-                            <Implementation-Title>${project.name}</Implementation-Title>
-                            <Implementation-Version>${project.version}</Implementation-Version>
-                            <Implementation-Build-Number>${build.number}</Implementation-Build-Number>
-                            <Implementation-SCM-Revision>${build.revision}</Implementation-SCM-Revision>
-                        </manifestEntries>
-                    </manifestSection>
-                </manifestSections>
-            </archive>
-        </configuration>
-    	</plugin>
 		</plugins>
 	</build>
 
