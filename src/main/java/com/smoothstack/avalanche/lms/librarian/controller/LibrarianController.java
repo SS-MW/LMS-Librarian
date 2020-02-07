@@ -7,7 +7,7 @@ import javax.validation.Valid;
 
 import com.smoothstack.avalanche.lms.librarian.entity.Branch;
 import com.smoothstack.avalanche.lms.librarian.entity.BookCopies;
-import com.smoothstack.avalanche.lms.librarian.svc.LibrarianService;
+import com.smoothstack.avalanche.lms.librarian.service.LibrarianService;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
